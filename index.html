@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ベンヤミン『一九〇〇年前後のベルリンの幼年時代』刊行記念サイト</title>
+<meta name="description" content="ヴァルター・ベンヤミン『一九〇〇年前後のベルリンの幼年時代』（田中純 訳・解説、講談社学術文庫）の刊行記念サイト。関連地図、図版画像、関連論文、正誤表・リンク集を掲載。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ---- 目次（このページ専用の追加スタイル） ---------------------- */
+.inhalt-liste { margin-top: 1.6rem; }
+
+/* 大区分：題名＋点線リーダー＋頁数 */
+.tz {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 1.9rem 0 0;
+  font-size: 1.06rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+.tz:first-child { margin-top: 0; }
+.tz .fuehrung {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  border-bottom: 3px dotted var(--route);
+  opacity: 0.7;
+  transform: translateY(-0.3em);
+}
+.tz .seite {
+  flex: 0 0 auto;
+  font-family: var(--serif-latin);
+  font-variant-numeric: oldstyle-nums;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--route-deep);
+}
+.tz .jahr {
+  font-weight: 400;
+  font-size: 0.86em;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+/* 章題の連なり（原書の目次組みにならい「／」で連ねる） */
+.kapitel-folge {
+  margin: 0.5rem 0 0;
+  padding: 0.7rem 1rem 0.8rem;
+  background: rgba(255,252,243,0.55);
+  border-left: 4px solid var(--park-deep);
+  font-size: 0.97rem;
+  line-height: 2.15;
+}
+.kapitel-folge .anhang {
+  display: block;
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px dotted var(--line);
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+}
+
+/* 訳者解説の内訳 */
+ol.unterteil {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0 0 0 1rem;
+  border-left: 4px solid var(--park-deep);
+  font-size: 0.95rem;
+}
+ol.unterteil > li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.18rem 0;
+}
+ol.unterteil .nr {
+  flex: 0 0 1.3em;
+  font-family: var(--serif-latin);
+  font-variant-numeric: oldstyle-nums;
+  color: var(--ink-soft);
+}
+ol.unterteil .fuehrung {
+  flex: 1 1 auto;
+  min-width: 1rem;
+  border-bottom: 1px dotted var(--line);
+  transform: translateY(-0.3em);
+}
+ol.unterteil .seite {
+  flex: 0 0 auto;
+  font-family: var(--serif-latin);
+  font-variant-numeric: oldstyle-nums;
+  color: var(--route-deep);
+}
+ol.unterteil li.binnen-zeile { display: block; padding: 0; }
+ol.unterteil .binnen {
+  margin: 0.1rem 0 0.4rem 1.9em;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.95;
+}
+
+/* 巻末の付属資料 */
+.beigaben {
+  margin: 1.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ink);
+  font-size: 0.97rem;
+}
+.beigaben li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.42rem 0;
+  border-bottom: 1px dotted var(--line);
+  letter-spacing: 0.08em;
+}
+.beigaben .fuehrung {
+  flex: 1 1 auto;
+  min-width: 1rem;
+  border-bottom: 1px dotted var(--line);
+  transform: translateY(-0.3em);
+}
+.beigaben .seite {
+  flex: 0 0 auto;
+  font-family: var(--serif-latin);
+  font-variant-numeric: oldstyle-nums;
+  color: var(--route-deep);
+}
+</style>
+</head>
+<body>
+
+<header class="cartouche">
+  <div class="cartouche-box">
+    <p class="ueber">Berliner Kindheit um Neunzehnhundert</p>
+    <h1>
+      <span class="autor">ヴァルター・ベンヤミン</span>
+      一九〇〇年前後のベルリンの幼年時代
+    </h1>
+    <p class="unter">ベルリン・タイプ稿＋パリ・タイプ稿　田中純 訳・解説</p>
+  </div>
+</header>
+
+<nav class="route" aria-label="サイト内経路">
+  <ol>
+    <li><a href="index.html" aria-current="page">書籍の紹介</a></li>
+    <li><a href="maps.html">関連地図</a></li>
+    <li><a href="figures.html">図版画像</a></li>
+    <li><a href="papers.html">関連論文</a></li>
+    <li><a href="info.html">関連情報</a></li>
+  </ol>
+</nav>
+
+<main class="frame">
+
+  <!-- ============ 書籍の紹介 ============ -->
+  <section id="buch" aria-labelledby="buch-titel">
+    <h2 class="abschnitt" id="buch-titel">書籍の紹介<span class="latin">Über das Buch</span></h2>
+
+    <div class="buch">
+      <figure class="schutzumschlag" aria-label="書影">
+        <span>書影<br>（画像を差し替えてください：<br>images/cover.jpg）</span>
+      </figure>
+
+      <div>
+        <p>
+          『一九〇〇年前後のベルリンの幼年時代』は、ヴァルター・ベンヤミンが亡命前夜から亡命のさなかに書き継いだ回想的散文です。
+          本書には、そのベルリン・タイプ稿（1933年）とパリ・タイプ稿（1938年）の両者をそれぞれ完全なかたちで訳出しています。これは二つのタイプ稿の差異を通じて、ベンヤミンの亡命体験を「読む」ためです。
+          そこで本書では、両稿の異同を辿りうる構成のもと、詳細な訳註と解説（とくに訳註を補う各章ごとの補説）を付し、
+          ベンヤミンの記憶の地誌を浮かび上がらせようと試みました。
+        </p>
+        <p class="hinweis">
+          ※ 紹介文は仮のものです。刊行版の内容紹介・帯文に合わせて差し替えてください。
+        </p>
+
+        <ul class="bibliografie">
+          <li><span class="feld">著者</span><span>ヴァルター・ベンヤミン</span></li>
+          <li><span class="feld">訳・解説</span><span>田中 純</span></li>
+          <li><span class="feld">出版社</span><span>講談社学術文庫</span></li>
+          <li><span class="feld">刊行年月</span><span>2026年11月</span></li>
+          <li><span class="feld">判型・頁数</span><span>文庫判・620頁</span></li>
+          <li><span class="feld">ISBN</span><span class="platzhalter">〔978-4-◯◯◯◯-◯◯◯◯-◯〕</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 目次 ============ -->
+  <section id="inhalt" aria-labelledby="inhalt-titel">
+    <h2 class="abschnitt" id="inhalt-titel">本書の目次<span class="latin">Inhalt</span></h2>
+
+    <div class="inhalt-liste">
+
+      <p class="tz">
+        <span>地図・家系図</span>
+        <span class="fuehrung"></span>
+        <span class="seite platzhalter">〔頁未定〕</span>
+      </p>
+
+      <!-- ---- ベルリン・タイプ稿（全30章） ---- -->
+      <p class="tz">
+        <span>ベルリン・タイプ稿<span class="jahr">（一九三三年）</span></span>
+        <span class="fuehrung"></span>
+        <span class="seite">19</span>
+      </p>
+      <p class="kapitel-folge">
+        ムンメレーレン／ティーアガルテン／カイザーパノラマ／戦勝記念塔／電話／蝶狩り／旅立ちと帰還／性の目覚め／冬の朝／シュテーグリッツとゲンティーンの角／ヘル・クノッヘ・カビヒトとフロイライン・プーファール／マグデブルク広場の<ruby>屋内市場<rt>マルクトハレ</rt></ruby>／発熱／回転木馬／カワウソ／ある訃報／<ruby>孔雀<rt>くじゃく</rt></ruby>島とグリーニケ／ブルーメスホーフ12／字習い箱／戸棚たち／学級文庫／隠れ場所／幽霊／夜会／乞食と娼婦／惨事と犯罪／裁縫箱／クリスマスの天使／二つの金管楽団／せむしのこびと
+      </p>
+
+      <!-- ---- パリ・タイプ稿 ---- -->
+      <p class="tz">
+        <span>パリ・タイプ稿<span class="jahr">（一九三八年）</span></span>
+        <span class="fuehrung"></span>
+        <span class="seite">295</span>
+      </p>
+      <p class="kapitel-folge">
+        （序文）／ロッジア／カイザーパノラマ／戦勝記念塔／電話／蝶狩り／ティーアガルテン／遅刻して／男の子の本たち／冬の朝／シュテーグリッツとゲンティーンの角／二つの謎の<ruby>像<rt>イメージ</rt></ruby>／屋内市場／発熱／カワウソ／<ruby>孔雀<rt>くじゃく</rt></ruby>島とグリーニケ／ある訃報／ブルーメスホーフ12／冬の夕べ／<ruby>曲がった<rt>クルンメ</rt></ruby>通り／靴下／ムンメレーレン／隠れ場所／幽霊／クリスマスの天使／惨事と犯罪／いろいろな色／裁縫箱／月／二つの金管楽団／せむしのこびと
+        <span class="anhang">（付録）回転木馬／性の目覚め</span>
+      </p>
+
+      <!-- ---- 訳者解説 ---- -->
+      <p class="tz">
+        <span>訳者解説　ベンヤミンの見えない都市</span>
+        <span class="fuehrung"></span>
+        <span class="seite">417</span>
+      </p>
+      <ol class="unterteil">
+        <li><span class="nr">1</span><span>はじめに</span><span class="fuehrung"></span><span class="seite">417</span></li>
+        <li><span class="nr">2</span><span>タイプ稿三種を訳出した理由、および訳註について</span><span class="fuehrung"></span><span class="seite">419</span></li>
+        <li><span class="nr">3</span><span>各章の補説</span><span class="fuehrung"></span><span class="seite">427</span></li>
+        <li class="binnen-zeile">
+          <ul class="binnen">
+            <li>ベルリン・タイプ稿</li>
+            <li>パリ・タイプ稿</li>
+            <li>タイプ稿間の章立ての違いについて</li>
+          </ul>
+        </li>
+        <li><span class="nr">4</span><span>おわりに</span><span class="fuehrung"></span><span class="seite">579</span></li>
+      </ol>
+
+      <!-- ---- 巻末 ---- -->
+      <ul class="beigaben">
+        <li><span>書誌</span><span class="fuehrung"></span><span class="seite">588</span></li>
+        <li><span>訳者あとがき</span><span class="fuehrung"></span><span class="seite platzhalter">〔頁未定〕</span></li>
+        <li><span>ベンヤミン幼少年時代（一八九二―一九一〇年）略年譜</span><span class="fuehrung"></span><span class="seite platzhalter">〔頁未定〕</span></li>
+        <li><span>図版一覧</span><span class="fuehrung"></span><span class="seite platzhalter">〔頁未定〕</span></li>
+        <li><span>地名索引</span><span class="fuehrung"></span><span class="seite platzhalter">〔頁未定〕</span></li>
+        <li><span>人名索引</span><span class="fuehrung"></span><span class="seite platzhalter">〔頁未定〕</span></li>
+      </ul>
+
+      <p class="hinweis">
+        ※ 頁数はゲラ（2026年6月28日校）にもとづく暫定のものです。刊行版で確定した頁数に差し替えてください。
+      </p>
+
+     
+
+    </div>
+  </section>
+
+  <!-- ============ 分岐 ============ -->
+  <section id="zweige" aria-labelledby="zweige-titel">
+    <h2 class="abschnitt" id="zweige-titel">本サイトの内容<span class="latin">Rundgang</span></h2>
+    <div class="zweige">
+      <a class="zweig" href="maps.html">
+        <span class="kennziffer">1</span>
+        <h3>関連地図</h3>
+        <p>
+          本書の舞台となったベルリン旧<ruby>西区<rt>ヴェステン</rt></ruby>・新<ruby>西区<rt>ヴェステン</rt></ruby>、
+          ティーアガルテン、ポツダム、ベルリン動物園の同時代地図六点（1898〜1910年）。
+          拡大縮小しながら、記述の現場を歩くように参照できます。
+        </p>
+        <span class="weiter">地図を開く</span>
+      </a>
+      <a class="zweig" href="figures.html">
+        <span class="kennziffer">2</span>
+        <h3>図版画像</h3>
+        <p>
+          本書に収録した図版のうち、公開可能なデータのある章について、画像を掲載します。
+          訳註・補説の別に従い、ベルリン・タイプ稿／パリ・タイプ稿の各章から計55点。
+        </p>
+        <span class="weiter">図版を見る</span>
+      </a>
+      <a class="zweig" href="papers.html">
+        <span class="kennziffer">3</span>
+        <h3>関連論文</h3>
+        <p>
+          本書の翻訳と解説の過程で得た知見をより詳しく論じた関連論文・研究ノートの一覧。
+          公開アクセスのあるものにはリンクを付します。
+        </p>
+        <span class="weiter">論文を見る</span>
+      </a>
+      <a class="zweig" href="info.html">
+        <span class="kennziffer">4</span>
+        <h3>関連情報</h3>
+        <p>
+          正誤表、リンク集、Zenodo に公開する研究資料への案内など。
+        </p>
+        <span class="weiter">情報を見る</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="impressum">
+  <span>© <span class="platzhalter">2026</span> 田中純／講談社</span>
+  <span class="latin">Berliner Kindheit um neunzehnhundert — Begleitseite</span>
+</footer>
+
+</body>
+</html>
