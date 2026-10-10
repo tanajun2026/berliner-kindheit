@@ -610,3 +610,18 @@ h3.kapitel + .karten { margin-top: 0.9rem; }
 }
 .referenz .rahmen { max-width: 100%; }
 .referenz .hinweis { margin: 0.6rem 0 0; }
+/* Final test additions */
+.schutzumschlag { margin: 0; padding: 0; aspect-ratio: auto; display: block; line-height: 0; }
+.schutzumschlag img { display: block; width: 100%; height: auto; }
+.inhalt h3 { margin: 2.2rem 0 1rem; }
+.inhalt h4 { margin: 1.6rem 0 0.7rem; font-size: 1.05rem; }
+.karte > div, .buch > div, .kartenkopf h3 { min-width: 0; }
+.quelle, .verweise { overflow-wrap: anywhere; }
+@media (max-width: 32rem) {
+  .viewer-kopf { flex-wrap: wrap; gap: 0.45rem; padding: 0.6rem; }
+  .viewer-kopf .titel { flex-basis: 100%; }
+  .viewer-kopf button { padding: 0.4rem 0.6rem; }
+}
+
+/* Bibliographic titles in source credits. */
+.quelle cite { font-style: italic; }
