@@ -17,6 +17,38 @@
 (function () {
   "use strict";
 
+  /* ファイル名の濁点・半濁点がアップロード時に分解された場合も読み込む。
+     元のURL、NFD、NFCを重複なしで試し、存在しない画像では再試行を止める。 */
+  function addImageFallback(el, src, onFailure) {
+    var sources = [new URL(src, document.baseURI).href];
+    ["NFD", "NFC"].forEach(function (form) {
+      var url = new URL(src, document.baseURI);
+      try {
+        url.pathname = url.pathname.split("/").map(function (part) {
+          return encodeURIComponent(decodeURIComponent(part).normalize(form));
+        }).join("/");
+        if (sources.indexOf(url.href) < 0) sources.push(url.href);
+      } catch (err) { /* 解釈できないURLは元の指定のみを使う。 */ }
+    });
+    var next = 1;
+    function retry() {
+      if (next < sources.length) {
+        el.src = sources[next++];
+      } else {
+        el.removeEventListener("error", retry);
+        if (onFailure) onFailure();
+      }
+    }
+    el.addEventListener("error", retry);
+    return retry;
+  }
+
+  document.querySelectorAll("img[src]").forEach(function (el) {
+    var retry = addImageFallback(el, el.getAttribute("src"));
+    // スクリプト実行前に読み込みが失敗していた画像も回復させる。
+    if (el.complete && el.naturalWidth === 0) retry();
+  });
+
   var viewer, stage, img, titleEl, loadEl;
   var scale = 1, minScale = 0.05, maxScale = 8;
   var tx = 0, ty = 0;
@@ -233,9 +265,9 @@
       loadEl.style.display = "none";
       fit();
     };
-    el.onerror = function () {
+    addImageFallback(el, src, function () {
       loadEl.textContent = "画像を読み込めませんでした（" + src + "）";
-    };
+    });
     el.src = src;
     viewer.querySelector('[data-akt="zu"]').focus();
   }
