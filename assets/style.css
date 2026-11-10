@@ -713,3 +713,13 @@ p.playlist { margin: 1.2rem 0 0; }
 .lesung h3 { font-size: 1.04rem; letter-spacing: 0.06em; line-height: 1.75; }
 .nachweis dd { margin-bottom: 0.55rem; }
 .nachweis .posten { font-weight: 700; }
+
+/* 索引冊子のダウンロード */
+.sakuin-heft { margin: 1.2rem 0 0; padding: 0.9rem 1.2rem 0.8rem; border: 1px dashed var(--line); background: rgba(255,252,243,0.5); }
+.inhalt h3.sakuin-titel { margin: 0 0 0.3rem; font-size: 1rem; letter-spacing: 0.12em; }
+.sakuin-heft p.hinweis { margin: 0.2rem 0 0.6rem; }
+.dl-liste { list-style: none; margin: 0; padding: 0; }
+.inhalt .dl-liste li { display: block; margin: 0.25rem 0; padding: 0.2rem 0 0.2rem 1.3rem; text-indent: -1.3rem; border-bottom: 0; gap: 0; font-size: 0.95rem; line-height: 1.75; }
+.dl-liste li::before { content: "↓"; display: inline-block; width: 1.3rem; text-indent: 0; color: var(--route); }
+.dl-liste .dl-info { margin-left: 0.8rem; font-size: 0.82rem; color: var(--ink-soft); }
+@media (max-width: 40rem) { .dl-liste .dl-info { display: block; margin-left: 0; text-indent: 0; } }
