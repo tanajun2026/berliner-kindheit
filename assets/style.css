@@ -625,3 +625,91 @@ h3.kapitel + .karten { margin-top: 0.9rem; }
 
 /* Bibliographic titles in source credits. */
 .quelle cite { font-style: italic; }
+
+/* ---------------- 朗読動画 ---------------- */
+.lesung {
+  display: grid;
+  grid-template-columns: minmax(16rem, 30rem) 1fr;
+  gap: 1.8rem;
+  border-top: 1px solid var(--ink);
+  padding-top: 1.6rem;
+  margin-top: 2.2rem;
+  scroll-margin-top: 1rem;
+}
+h2.abschnitt + .lesung { margin-top: 1.2rem; border-top: 0; padding-top: 0.4rem; }
+@media (max-width: 50rem) { .lesung { grid-template-columns: 1fr; } }
+.lesung-text { min-width: 0; }
+.lesung h3 { margin: 0 0 0.3rem; font-size: 1.18rem; letter-spacing: 0.14em; line-height: 1.8; }
+.lesung h3 .latin {
+  font-family: var(--serif-latin); font-style: italic; font-weight: 400;
+  font-size: 0.85em; letter-spacing: 0.04em; color: var(--ink-soft); margin-left: 0.8rem;
+}
+.lesung .angaben { margin: 0 0 0.7rem; font-size: 0.88rem; letter-spacing: 0.08em; color: var(--ink-soft); }
+.lesung p { margin: 0.4rem 0; font-size: 0.96rem; line-height: 1.95; }
+.lesung p.aufbau { font-size: 0.9rem; color: var(--ink-soft); }
+.film {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1.5px solid var(--ink);
+  background: #0b0a09;
+  overflow: hidden;
+  align-self: start;
+}
+.film img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+.film iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.film .abspielen {
+  position: absolute; left: 50%; top: 50%;
+  width: 4.2rem; height: 4.2rem; margin: -2.1rem 0 0 -2.1rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255,252,243,0.9);
+  background: rgba(127,44,37,0.82);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.film .abspielen::after {
+  content: ""; position: absolute; left: 52%; top: 50%;
+  transform: translate(-40%, -50%);
+  border-style: solid; border-width: 0.75rem 0 0.75rem 1.2rem;
+  border-color: transparent transparent transparent #fffcf3;
+}
+.film .abspielen:hover { transform: scale(1.06); background: rgba(162,59,50,0.92); }
+.film .wartet-marke { display: none; }
+.film.wartet img { cursor: default; filter: saturate(0.7); }
+.film.wartet .abspielen { display: none; }
+.film.wartet .wartet-marke {
+  display: block; position: absolute; right: 0.6rem; bottom: 0.5rem;
+  font-size: 0.8rem; letter-spacing: 0.2em; color: #fffcf3;
+  background: rgba(42,38,33,0.72); padding: 0.1rem 0.7rem;
+}
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.lesung .yt-link {
+  display: inline-block; margin-top: 0.5rem; font-size: 0.86rem; letter-spacing: 0.16em;
+  text-decoration: none; border-bottom: 3px dotted var(--route); padding-bottom: 2px;
+}
+.lesung .yt-link[hidden] { display: none; }
+.nachweis {
+  margin-top: 0.9rem; font-size: 0.86rem;
+  border: 1px dashed var(--line); padding: 0.55rem 0.9rem;
+  background: rgba(255,252,243,0.5);
+}
+.nachweis summary { cursor: pointer; letter-spacing: 0.15em; color: var(--ink-soft); }
+.nachweis dl { margin: 0.6rem 0 0.2rem; line-height: 1.85; }
+.nachweis dt { font-weight: 700; letter-spacing: 0.12em; margin-top: 0.5rem; }
+.nachweis dd { margin: 0 0 0.15rem 1.2rem; overflow-wrap: anywhere; }
+.nachweis cite { font-style: italic; }
+p.playlist { margin: 1.2rem 0 0; }
+.playlist-link {
+  display: inline-block; font-size: 0.95rem; letter-spacing: 0.14em;
+  border: 1.5px solid var(--ink); background: #fff; padding: 0.4rem 1.1rem; text-decoration: none; color: var(--ink);
+}
+.playlist-link:hover { box-shadow: 5px 6px 0 rgba(162,59,50,0.22); color: var(--route-deep); }
+.playlist-link[hidden], .playlist-wartet[hidden] { display: none; }
+.playlist-wartet { font-size: 0.9rem; color: var(--ink-soft); }
+@media (max-width: 40rem) {
+  nav.route li + li::before { width: 1rem; margin: 0 0.3rem; }
+  nav.route a { letter-spacing: 0.08em; }
+}
+/* 朗読動画：YouTube と同じ長いタイトル、出典の項目名 */
+.lesung h3 { font-size: 1.04rem; letter-spacing: 0.06em; line-height: 1.75; }
+.nachweis dd { margin-bottom: 0.55rem; }
+.nachweis .posten { font-weight: 700; }
