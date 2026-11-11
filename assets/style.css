@@ -723,3 +723,18 @@ p.playlist { margin: 1.2rem 0 0; }
 .dl-liste li::before { content: "↓"; display: inline-block; width: 1.3rem; text-indent: 0; color: var(--route); }
 .dl-liste .dl-info { margin-left: 0.8rem; font-size: 0.82rem; color: var(--ink-soft); }
 @media (max-width: 40rem) { .dl-liste .dl-info { display: block; margin-left: 0; text-indent: 0; } }
+
+/* 本書への導線（図版ページ・地図ページ） */
+p.seitenrolle { border-left: 3px solid var(--route); padding: 0.2rem 0 0.2rem 0.9rem; }
+.zum-text { margin: -0.4rem 0 1rem; font-size: 0.86rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+.zum-text::before { content: "→ "; color: var(--route); }
+.buch-hinweis { display: flex; gap: 1.4rem; align-items: flex-start; margin: 3.2rem 0 1rem; padding: 1.2rem 1.4rem;
+  border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: rgba(255,252,243,0.55); }
+.buch-hinweis .bh-cover { flex: 0 0 96px; }
+.buch-hinweis .bh-cover img { width: 96px; height: auto; display: block; box-shadow: 0 2px 6px rgba(0,0,0,0.18); }
+.buch-hinweis p { margin: 0.25rem 0; line-height: 1.8; }
+.buch-hinweis .bh-titel { font-weight: 700; letter-spacing: 0.04em; }
+.buch-hinweis .bh-daten { font-size: 0.86rem; color: var(--ink-soft); }
+.buch-hinweis .bh-links { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; }
+.buch-hinweis .bh-links a::before { content: "→ "; color: var(--route); }
+@media (max-width: 40rem) { .buch-hinweis { flex-direction: column; } .buch-hinweis .bh-cover { flex-basis: auto; } }

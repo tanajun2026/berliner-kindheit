@@ -36,6 +36,11 @@
       f.referrerPolicy = 'strict-origin-when-cross-origin';
       film.replaceChildren(f);
       film.classList.add('laeuft');
+      try {                                   // GoatCounter: count plays as events (no cookies)
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: 'play-' + ((article && article.id) || id), title: '再生：' + (f.title || id), event: true });
+        }
+      } catch (e) {}
     }
     if (btn) btn.addEventListener('click', play);
     var img = film.querySelector('img');
