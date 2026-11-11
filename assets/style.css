@@ -738,3 +738,12 @@ p.seitenrolle { border-left: 3px solid var(--route); padding: 0.2rem 0 0.2rem 0.
 .buch-hinweis .bh-links { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; }
 .buch-hinweis .bh-links a::before { content: "→ "; color: var(--route); }
 @media (max-width: 40rem) { .buch-hinweis { flex-direction: column; } .buch-hinweis .bh-cover { flex-basis: auto; } }
+
+/* 図版ページ：訳文の一節 */
+blockquote.zitat { margin: 0.5rem 0 0.7rem; padding: 0.45rem 0 0.45rem 0.9rem; border-left: 2px solid var(--route);
+  font-size: 0.93rem; line-height: 1.95; color: var(--ink); }
+blockquote.zitat p { margin: 0; }
+blockquote.zitat p::before { content: "「"; } blockquote.zitat p::after { content: "」"; }
+blockquote.zitat cite { display: block; margin-top: 0.15rem; font-style: normal; font-size: 0.8rem; color: var(--ink-soft); }
+blockquote.zitat cite::before { content: "――"; }
+blockquote.zitat rt { font-size: 0.55em; }
