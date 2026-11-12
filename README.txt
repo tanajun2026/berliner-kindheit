@@ -116,3 +116,12 @@ Zenodo：https://zenodo.org/records/21287949
 【追加修正（2026年11月11日・4）】
 ・SNS用のカード表示（OGP）を全ページに設定。画像は images/ogp/（1200×630）：
   index（書影と書名）、maps（旧西区の地図）、figures（図版4点）、papers・info（書影と書名）。朗読動画ページは従来どおり。
+
+【追加修正（2026年11月12日）】
+・maps.html：地図1・2・3をカラー版に差し替え。
+  地図1・2は Pharus-Plan Berlin（1902）を下地に、本書所収の地図の注記を移して改訂したもの。年を1902に、出典を「Pharus-Plan Berlin (1902)。本書所収の地図を改訂。」に変更。
+  画像ファイル名を 01_karte-AlterWesten1902.jpg・02_karte-NeuerWesten1902.jpg に変更（maps/・thumbs/。旧1904の4ファイルは不要）。
+  地図3は Kiesslings Wanderbuch（1898）の色でカラー化（ファイル名は従来どおり、キャッシュ回避のため ?v=2 を付加）。
+・地図2の番号対照「2　カイザー・フリードリヒ学校」に「（すでに開校しているが、地図には未記載）」を追記。
+・info.html：Pharus-Plan の項に、サイトの地図1・2は1902年版にもとづいて改訂したものである旨を追記。
+・SNS用カード画像 images/ogp/maps.jpg をカラーの地図1に差し替え（?v=2）。
