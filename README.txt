@@ -128,14 +128,4 @@ Zenodo：https://zenodo.org/records/21287949
 ・地図1・2の説明文末に「この地図は本書所収の地図を、1902年版の同図をもとに改訂したものです。」、地図3の説明文末に「この地図は本書所収の地図を改訂したものです。」を追記。
 ・地図1の「宮廷猟番通り」の下地を白一色に修正（地図1の画像に ?v=2 を付加）。
 ・地図1の「宮廷猟番通り」の白地の縁をまっすぐに修正（?v=3）。
-
-【追加修正（2026年11月13日）】
-・Zenodo 公開資料の案内（Forschungsnotizen）を info.html から papers.html に移設。
-  papers.html は「雑誌掲載の論考」（Aufsätze）と「Zenodo 公開資料」（Forschungsnotizen, id="zenodo-titel"）の2節構成に。
-  info.html には関連論文ページへの案内の一文を残し、旧リンク info.html#zenodo-titel は papers.html#zenodo-titel へ自動転送。
-・info.html・papers.html・index.html の説明文（description、OGP、トップページの案内）を新しい構成に合わせて修正。
-・SNS用カード画像 images/ogp/info.jpg から「Zenodo公開資料」の文言を削除（?v=2）。
-・papers.html の「Zenodo 公開資料」に付随資料総覧（DOI 10.5281/zenodo.21339417、本書凡例に記載）を先頭に、
-  図版データ集（concept DOI 10.5281/zenodo.21336620）を末尾に追加。節の欧文表記を Begleitmaterialien に変更。
-  あわせて info.html の案内文と index.html の紹介文を「付随資料（総覧・研究ノート・図版データ集）」に修正。
-・papers.html：プーファール論文のリンクとDOIを全版共通のDOI（10.5281/zenodo.21287948）に変更し、表記を「DOI（全版共通）」に統一。版表示「Version 1.0」を削除。
+・地図1・2：1902年版の重ね合わせを歪みのない方法に変更し、番号の枠・丸・矢印の黒線をすべて引き直した（?v=4）。
